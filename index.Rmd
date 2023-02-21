@@ -1,0 +1,86 @@
+---
+title: "A3: SPL Library Checkouts"
+output: html_document
+---
+
+### Introduction
+
+An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+
+### Summary Information
+
+Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+
+These will likely be calculated using your DPLYR skills, answering questions such as:
+
+- What is the average number of checkouts for each item?
+- What is the month or year with the most/least checkouts for a book that you're interested in?
+- What is the month or year with the most/least checkouts for ebooks?
+- How has the number of print book checkouts changed over time?
+
+Feel free to calculate and report values that you find relevant.
+
+### The Dataset
+
+- Who collected/published the data?  
+- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+- How was the data collected or generated?  
+- Why was the data collected?  
+- What, if any, ethical questions do you need to consider when working with this data?  
+- What are possible limitations or problems with this data?   (at least 200 words)
+
+
+### First Trends Over Time Chart
+
+Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+
+The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+
+- Show more than one, but fewer than ~10 trends
+  - For example, two books, or 5 different mediums
+- You must have clear x and y axis labels
+- The chart needs a clear title 
+- You need a legend for your different line colors and a clear - legend title
+In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
+
+When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
+
+Here's an example of how to run an R script inside an RMarkdown file:
+
+``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```
+
+### Second Trends Over Time Chart
+
+Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+
+The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+
+- Show more than one, but fewer than ~10 trends
+  - For example, two books, or 5 different mediums
+- You must have clear x and y axis labels
+- The chart needs a clear title 
+- You need a legend for your different line colors and a clear - legend title
+In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
+
+When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
+
+Here's an example of how to run an R script inside an RMarkdown file:
+
+``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```
+
+### Your Choice
+
+The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
+
+- You must have clear x and y axis labels
+- The chart needs a clear title 
+- You need a legend for your different line colors and a clear legend title
+
+Here's an example of how to run an R script inside an RMarkdown file:
+
+``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```
+
+
