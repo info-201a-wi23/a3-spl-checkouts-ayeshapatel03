@@ -36,4 +36,4 @@ all_data <- all_data %>%
   filter(Title == Series)
 
 ggplot(data = all_data) +
-  geom_bar(mapping = aes(fill = MaterialType, y = Checkouts, x = Title), position = "dodge", stat = "identity")
+  geom_bar(mapping = aes(fill = MaterialType, y = Checkouts, x = Title), position = "stack", stat = "identity")
