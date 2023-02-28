@@ -25,7 +25,7 @@ by_book <- by_book %>%
   summarize(sum = sum(Checkouts))
 
 ggplot(data = by_book) +
-  geom_line(mapping = aes(x = date , y = sum, color = Title)) + 
-  labs(title = "Checkouts over Time by Book Series", x = "Date", y = "Checkouts") +
+  geom_line(mapping = aes(x = date, y = sum, color = Title)) +
+  labs(title = "Checkouts over Time by Book in A Court of Thorns and Roses Series", x = "Date", y = "Checkouts") +
   scale_color_brewer(palette = "Dark2") +
   theme_bw()

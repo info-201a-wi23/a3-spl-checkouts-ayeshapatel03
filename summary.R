@@ -20,7 +20,7 @@ type_lowest_avg_checkouts <- all_data %>%
   pull(MaterialType)
 
 year_most_checkouts <- all_data %>%
-  #filter(MaterialType == "BOOK") %>%
+  # filter(MaterialType == "BOOK") %>%
   group_by(CheckoutYear) %>%
   summarize(sum = sum(Checkouts)) %>%
   filter(sum == max(sum, na.rm = TRUE)) %>%
@@ -83,7 +83,7 @@ by_series$Title[str_detect(tolower(by_series$Title), "kingdom of ash")] <- "Thro
 by_series$Title[str_detect(tolower(by_series$Title), "queen of shadows")] <- "Throne of Glass Series"
 by_series$Title[str_detect(tolower(by_series$Title), "tower of dawn")] <- "Throne of Glass Series"
 
-#by_series$Title[str_detect(tolower(by_series$Title), "catwoman")] <- "Catwoman: Soulstealer"
+# by_series$Title[str_detect(tolower(by_series$Title), "catwoman")] <- "Catwoman: Soulstealer"
 
 by_series$Title[str_detect(tolower(by_series$Title), "crescent city")] <- "Crescent City Series"
 

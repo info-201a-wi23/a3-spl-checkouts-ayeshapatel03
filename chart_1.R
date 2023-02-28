@@ -12,11 +12,11 @@ by_type <- all_data %>%
   mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
   group_by(MaterialType, date) %>%
   summarize(sum = sum(Checkouts))
-  
+
 ggplot(data = by_type) +
   geom_line(
-    mapping = aes(x = date, y = sum, color = MaterialType)) +
+    mapping = aes(x = date, y = sum, color = MaterialType)
+  ) +
   labs(title = "Checkouts over Time by Material Type", x = "Date", y = "Checkouts") +
   scale_color_brewer(palette = "Dark2") +
   theme_bw()
-  
