@@ -5,8 +5,6 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
-
 Sarah J. Maas is a internationally acclaimed author, known for writing the Throne of Glass and A Court of Thorns and Roses series. According to Goodreads, her books have sold more than twelve million copies worldwide. I started reading her books in middle school and they are some of my most favorite reads; I’ve read both previously mentioned series over and over, hoping to relive the immersive experience. I wanted to explore how Sarah J. Maas’s books have fluctuated in terms of popularity over the years. I was extremely curious whether they have increased or decreased in popularity since I read the books. To conduct this analysis, I will use data from the Seattle Public Library’s open data portal, specifically the data on all of books written by Sarah J. Maas.
 
 ### Summary Information
@@ -19,11 +17,30 @@ To gain a general understanding of the data, I found some summary values. All of
 ### The Dataset
 
 - Who collected/published the data?  
+
+The data was collected by the Seattle Public Library and published by the City of Seattle (City of Seattle).
+
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
+
+I filtered the data to include only books written by Sarah J. Maas. The "Creator" is listed as either "Sarah J. Maas" or "Maas, Sarah J.". The dates range from August 2012 to January 2023.
+There are 3,223 rows and 12 columns. The columns are: UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, and PublicationYear. 
+
+- How was the data collected or generated?
+
+The data was generated using a monthly count of checkouts per physical and digital items from April 2005 to February 2023 at the Seattle Public Library. According the City of Seattle website, the checkout data comes from multiple current and historical sources. Usage data for media items is provided by Overdrive, hoopla, Freegal, and RBDigital. Physical item checkout data is provided by the Legrady artwork data archives and Horizon ILS. 
+
+- Why was the data collected?
+
+The data was collected as a part of the City of Seattle's Open Data program through which they aim to make data publicly available to city residents. The program seeks to improve public understanding of the City's operations, generate economic opportunities, empower city employees, and encourage innovation.
+The data on checkouts can provide insights into management decisions and reading preferences. 
+
+- What, if any, ethical questions do you need to consider when working with this data? 
+
+While there are no obvious ethical questions, one that may come up is privacy. While the details of how the library obtained the checkout data is unclear, they may or may not have tracked or stored the specific individual accounts that checked out certain items. Still, since books can reveal a person's interests, it can be considered a private affair.
+
 - What are possible limitations or problems with this data?   (at least 200 words)
+
+One limitation with the data is a lack of consistency between different book titles and authors. For example, an author could be listed as both “First Last” or “Last, First”. This made filtering the data a bit difficult because I had to consider both cases. Similarly, the same titles were listed differently and in endless variations. This made it extremely difficult and tedious to run different analyses. To fix this, the data had to be cleaned up; otherwise, the results would be very unreliable. Another limitation is that the data only pertains to the Seattle Library’s checkout data. Seattle residents have their own interests, beliefs, and values which may or may not be reflected in the books they checkout and cannot be used to indicate the practices of other individuals in the state or country. This would limit the applicability of the findings to a wider audience since only a small, niche population is considered. Another limitation is that the specific checkout date is not listed. While the month and year are listed, the specific date is not which would make analyzing trends within a given month impossible. Lastly, the “Subjects” column is not comprehensive and consistent, with many different categories. This makes searching by subject a bit more difficult. 
 
 
 ### First Trends Over Time Chart
