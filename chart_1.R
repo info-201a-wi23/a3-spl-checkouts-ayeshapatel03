@@ -19,5 +19,4 @@ ggplot(data = by_type) +
   labs(title = "Checkouts over Time by Material Type", x = "Date", y = "Checkouts") +
   scale_color_brewer(palette = "Dark2") +
   theme_bw()
-
   

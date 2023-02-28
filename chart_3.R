@@ -23,14 +23,12 @@ all_data$Title[str_detect(tolower(all_data$Title), "kingdom of ash")] <- "Throne
 all_data$Title[str_detect(tolower(all_data$Title), "queen of shadows")] <- "Throne of Glass Series"
 all_data$Title[str_detect(tolower(all_data$Title), "tower of dawn")] <- "Throne of Glass Series"
 
-all_data$Title[str_detect(tolower(all_data$Title), "catwoman")] <- "Catwoman: Soulstealer"
-
 all_data$Title[str_detect(tolower(all_data$Title), "crescent city")] <- "Crescent City Series"
 
 all_data$Title[str_detect(tolower(all_data$Title), "house of earth and blood")] <- "Crescent City Series"
 all_data$Title[str_detect(tolower(all_data$Title), "house of sky and breath")] <- "Crescent City Series"
 
-Series <- c("A Court of Thorns and Roses Series", "Crescent City Series", "Catwoman: Soulstealer", "Throne of Glass Series")
+Series <- c("A Court of Thorns and Roses Series", "Crescent City Series", "Soulstealer", "Throne of Glass Series")
 
 all_data <- all_data %>%
   filter(Title == Series)
