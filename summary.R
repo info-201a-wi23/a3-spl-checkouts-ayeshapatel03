@@ -83,7 +83,7 @@ by_series$Title[str_detect(tolower(by_series$Title), "kingdom of ash")] <- "Thro
 by_series$Title[str_detect(tolower(by_series$Title), "queen of shadows")] <- "Throne of Glass Series"
 by_series$Title[str_detect(tolower(by_series$Title), "tower of dawn")] <- "Throne of Glass Series"
 
-by_series$Title[str_detect(tolower(by_series$Title), "catwoman")] <- "Catwoman: Soulstealer"
+#by_series$Title[str_detect(tolower(by_series$Title), "catwoman")] <- "Catwoman: Soulstealer"
 
 by_series$Title[str_detect(tolower(by_series$Title), "crescent city")] <- "Crescent City Series"
 
@@ -96,7 +96,7 @@ series_most_checkouts <- by_series %>%
   filter(sum == max(sum)) %>%
   pull(Title)
 
-Series <- c("A Court of Thorns and Roses Series", "Crescent City Series", "Catwoman: Soulstealer", "Throne of Glass Series")
+Series <- c("A Court of Thorns and Roses Series", "Crescent City Series", "Throne of Glass Series")
 
 series_least_checkouts <- by_series %>%
   filter(Title == Series) %>%
