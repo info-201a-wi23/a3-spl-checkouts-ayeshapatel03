@@ -7,18 +7,14 @@ output: html_document
 
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
 
+Sarah J. Maas is a internationally acclaimed author, known for writing the Throne of Glass and A Court of Thorns and Roses series. According to Goodreads, her books have sold more than twelve million copies worldwide. I started reading her books in middle school and they are some of my most favorite reads; I’ve read both previously mentioned series over and over, hoping to relive the immersive experience. I wanted to explore how Sarah J. Maas’s books have fluctuated in terms of popularity over the years. I was extremely curious whether they have increased or decreased in popularity since I read the books. To conduct this analysis, I will use data from the Seattle Public Library’s open data portal, specifically the data on all of books written by Sarah J. Maas.
+
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("summary.R")}
+```
 
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+To gain a general understanding of the data, I found some summary values. All of the data is in relation to books written by Sarah J. Maas and checked out at the Seattle Public Library. The year with the lowest number of Sarah J. Maas checkouts is `r year_least_checkouts` while the year with the highest number of checkouts is `r year_most_checkouts`. I was also interested in which type of material is most and least frequently checked out. `r type_highest_avg_checkouts` is the material type with the highest average checkouts while `r type_lowest_avg_checkouts` is the material type with the lowest average checkouts. The series with the most total checkouts is the `r series_most_checkouts` while the series with the least total checkouts is the `r series_least_checkouts`. Similarly, the book with the most checkouts is `r book_most_checkouts` while the book with the least checkouts is `r book_least_checkouts`.
 
 ### The Dataset
 
