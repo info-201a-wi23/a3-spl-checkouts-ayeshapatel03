@@ -12,13 +12,13 @@ Sarah J. Maas is a internationally acclaimed author, known for writing the Thron
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("summary.R")}
 ```
 
-To gain a general understanding of the data, I found some summary values. All of the data is in relation to books written by Sarah J. Maas and checked out at the Seattle Public Library. The year with the lowest number of Sarah J. Maas checkouts is `r year_least_checkouts` while the year with the highest number of checkouts is `r year_most_checkouts`. I was also interested in which type of material is most and least frequently checked out. `r type_highest_avg_checkouts` is the material type with the highest average checkouts while `r type_lowest_avg_checkouts` is the material type with the lowest average checkouts. The series with the most total checkouts is the `r series_most_checkouts` while the series with the least total checkouts is the `r series_least_checkouts`. Similarly, the book with the most checkouts is `r book_most_checkouts` while the book with the least checkouts is `r book_least_checkouts`.
+To gain a general understanding of the data, I found some summary values. All of the data is in relation to books written by Sarah J. Maas and checked out at the Seattle Public Library. The year with the lowest number of Sarah J. Maas checkouts is `r year_least_checkouts` while the year with the highest number of checkouts is `r year_most_checkouts`. I was also interested in which type of material is most and least frequently checked out. `r type_highest_avg_checkouts` is the material type with the highest average checkouts while `r type_lowest_avg_checkouts` is the material type with the lowest average checkouts. The series with the most total checkouts is the `r series_most_checkouts` while the series with the least total checkouts is the `r series_least_checkouts`. Similarly, the book with the most checkouts is *`r book_most_checkouts`* while the book with the least checkouts is *`r book_least_checkouts`*.
 
 ### The Dataset
 
 - Who collected/published the data?  
 
-The data was collected by the Seattle Public Library and published by the City of Seattle (City of Seattle).
+The data was collected by the [Seattle Public Library](https://data.seattle.gov/Community/Checkouts-by-Title/tmmm-ytt6) and published by the City of Seattle (City of Seattle).
 
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
 
@@ -43,57 +43,29 @@ While there are no obvious ethical questions, one that may come up is privacy. W
 One limitation with the data is a lack of consistency between different book titles and authors. For example, an author could be listed as both “First Last” or “Last, First”. This made filtering the data a bit difficult because I had to consider both cases. Similarly, the same titles were listed differently and in endless variations. This made it extremely difficult and tedious to run different analyses. To fix this, the data had to be cleaned up; otherwise, the results would be very unreliable. Another limitation is that the data only pertains to the Seattle Library’s checkout data. Seattle residents have their own interests, beliefs, and values which may or may not be reflected in the books they checkout and cannot be used to indicate the practices of other individuals in the state or country. This would limit the applicability of the findings to a wider audience since only a small, niche population is considered. Another limitation is that the specific checkout date is not listed. While the month and year are listed, the specific date is not which would make analyzing trends within a given month impossible. Lastly, the “Subjects” column is not comprehensive and consistent, with many different categories. This makes searching by subject a bit more difficult. 
 
 
-### First Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+### Checkouts by Material Type
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart_1.R")}
 ```
 
-### Second Trends Over Time Chart
+I measured the trends in material type over time because I was interested in seeing how the pandemic affected people’s consumption of books. Overall, it appears that sound disc is the least used and most stable. It doesn’t change much across the years. Book checkouts did experience a minor drop in 2020, most likely due to the pandemic. However, book checkouts have been gradually increasing since then. eBooks have steadily increased since 2012. The most dramatic increase occurred in audiobooks in the second half of 2020. It seems that audiobook consumption has exponentially increased since the pandemic.
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+### Checkouts by Book in A Court of Thorns and Roses Series
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart_2.R")}
 ```
 
-### Your Choice
+I measured the trends in the checkouts over time by books in the A Court of Thorns and Roses Series. I measured this for 2 reasons. Firstly, this is my favorite series by Sarah J. Maas and I was curious to see which books experienced surges of popularity. Secondly, after learning that this series has the highest total number of checkouts in my summary section, I became curious about which books contributed to this number the most and exactly when these checkouts occurred. The plot shows that until 2021, all of the books had a modest number of checkouts, however, in and after 2021, every book in the series experienced a huge surge in checkouts. This may be due to “booktok” or “bookstagram” which became popular during the pandemic and Maas’s books reached a wider audience. All throughout, *A Court of Thorns and Roses* seems to have the most checkouts while *A Court of Frost and Starlight* seems to have the least number of checkouts overall. One interesting pattern I noticed is that a surge and drop in one book generally corresponded to surges and drops in the other books. This suggests that people would checkout and read all the books in the series at or around the same time.
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
+### Material Type for Each Series
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart_3.R")}
 ```
 
+I measured the portion of checkouts for each material type for each series because I was curious to see whether readers preferred listening, reading digitally, or other forms for some series over others. Overall, the results were varied but eBooks are the most popular overall. For the A Court of Thorns and Roses series, audiobook is the most popular while book is the least popular. For the Throne of Glass series, eBook is the most popular while sound disc is the list. For the Crescent City series, eBook is the most popular while book is the least. However sound disc and audiobooks may not be available for the Crescent City series since it’s relatively new. 
 
+### References
+
+Goodreads. (n.d.). Sarah J. Maas (author of a Court of Thorns and roses). Goodreads. Retrieved February 27, 2023, from https://www.goodreads.com/author/show/3433047.Sarah_J_Maas 
+
+Library, T. S. P. (2023, February 6). Checkouts by title: City of seattle open data portal. Seattle Open Data. Retrieved February 27, 2023, from https://data.seattle.gov/Community/Checkouts-by-Title/tmmm-ytt6 
